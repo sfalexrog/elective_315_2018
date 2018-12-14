@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>All messages</title>
+</head>
+<body>
+    <p>Number of messages: {{ msgs|length }}</p>
+    <p>
+        <a href="/add_message"> Add a new message </a>
+    </p>
+    {% for msg in msgs %}
+        <p>
+            {{ msg.sender }} said: {{ msg.contents }}
+
+        </p>
+    {% endfor %}
+</body>
+</html>
